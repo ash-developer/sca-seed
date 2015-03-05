@@ -5,11 +5,10 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var _ = require('lodash'),
-        scarc = grunt.file.readJSON('./.scarc');
-
-    exclude = _.map(scarc.exclude, function (path) {
-        return '!' + path;
-    });
+        scarc = grunt.file.readJSON('./.scarc'),
+        exclude = _.map(scarc.exclude, function (path) {
+            return '!' + path;
+        });
 
     grunt.initConfig({
 
